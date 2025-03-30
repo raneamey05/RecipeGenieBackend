@@ -3,6 +3,7 @@ import random
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from flask_bcrypt import Bcrypt
+from waitress import serve
 
 app = Flask(__name__)
 CORS(app)
@@ -309,4 +310,4 @@ def trending_recipes():
         return jsonify({"response": "❌ Error fetching trending recipes."})
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    serve(app, host="0.0.0.0", port=5000)  # Use Waitress for production
