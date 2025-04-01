@@ -209,7 +209,7 @@ def get_recipes():
                     extra_str = ", ".join(extra_ingredients) if extra_ingredients else None
                     description = f"You need additional ingredients such as: {missing_str} etc. to make this recipe."
                     if extra_str:
-                        description += f"\n❌ Note: {extra_str} etc. are not needed for this recipe."
+                        description += f"\n❌ Note: The Ingredients like {extra_str} etc. are not needed for this recipe."
 
                     partial_recipes.append({
                         "name": name,
